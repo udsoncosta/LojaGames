@@ -55,12 +55,12 @@ namespace LojaGames.Service.Implements
 
         public async Task<Categoria?> Update(Categoria categoria)
         {
-            var TemaUpdate = await _context.Categorias.FindAsync(categoria.Id);
+            var CategoriaUpdate = await _context.Categorias.FindAsync(categoria.Id);
 
-            if (TemaUpdate is null)
+            if (CategoriaUpdate is null)
                 return null;
 
-            _context.Entry(TemaUpdate).State = EntityState.Detached;
+            _context.Entry(CategoriaUpdate).State = EntityState.Detached;
             _context.Entry(categoria).State = EntityState.Modified;
             await _context.SaveChangesAsync();
 

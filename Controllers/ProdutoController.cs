@@ -1,8 +1,6 @@
 ﻿using FluentValidation;
 using LojaGames.Model;
 using LojaGames.Service;
-using LojaGames.Model;
-using LojaGames.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LojaGames.Controllers
